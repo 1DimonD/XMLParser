@@ -5,13 +5,29 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:XMLParser"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="500" Width="700">
     <Grid>
-        <StackPanel>
-            <RadioButton GroupName="XMLFinder" Name="RadioDOM">DOM</RadioButton>
-            <RadioButton GroupName="XMLFinder" Name="RadioSAX">SAX</RadioButton>
-            <RadioButton GroupName="XMLFinder" Name="RadioLINQ" IsChecked="true">LINQ</RadioButton>
-        </StackPanel>
-        <Button Height="20" Width="120" Click="FindButton_OnClick">Find</Button>
+        <DockPanel>
+            <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal" MaxHeight="50">
+                <Button Click="FindButton_OnClick" Width="300" Content="Find" FontSize="16"></Button>
+                <StackPanel Margin="0 0 5 0">
+                    <RadioButton GroupName="XMLFinder" Name="RadioDOM" FontSize="14">DOM</RadioButton>
+                    <RadioButton GroupName="XMLFinder" Name="RadioSAX" FontSize="14">SAX</RadioButton>
+                    <RadioButton GroupName="XMLFinder" FontSize="14" IsChecked="true">LINQ</RadioButton>
+                </StackPanel>
+                <Button Width="350" Content="Convert to HTML" FontSize="16"></Button>
+            </StackPanel>
+            
+            <StackPanel DockPanel.Dock="Left" Name="Conditions" Width="330" Margin="10 0 10 0">
+                <Label HorizontalAlignment="Center" Margin="0 0 0 10" FontSize="20">Conditions</Label>
+                
+            </StackPanel>
+            
+            <StackPanel>
+                <Label HorizontalAlignment="Center" FontSize="20">Current document</Label>
+                <TextBox Name="CurrentDocument" IsEnabled="False" Height="370"></TextBox>
+            </StackPanel>
+            
+        </DockPanel>
     </Grid>
 </Window>
