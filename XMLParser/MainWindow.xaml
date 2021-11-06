@@ -1,0 +1,17 @@
+﻿<Window x:Class="XMLParser.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:XMLParser"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <StackPanel>
+            <RadioButton GroupName="XMLFinder" Name="RadioDOM">DOM</RadioButton>
+            <RadioButton GroupName="XMLFinder" Name="RadioSAX">SAX</RadioButton>
+            <RadioButton GroupName="XMLFinder" Name="RadioLINQ" IsChecked="true">LINQ</RadioButton>
+        </StackPanel>
+        <Button Height="20" Width="120" Click="FindButton_OnClick">Find</Button>
+    </Grid>
+</Window>

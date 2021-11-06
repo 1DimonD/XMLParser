@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<List>
+    <Scientist>
+        <FullName>Поліщук Наталія Володимирівна</FullName>
+        <Faculty>ФКНК</Faculty>
+        <Department>ТТП</Department>
+        <ScientificDegree>Асистент</ScientificDegree>
+        <AcademicTitles>
+            <Title date="01-09-2021">Найкраща практикиня К-26</Title>
+        </AcademicTitles>
+    </Scientist>
+    
+    <Scientist>
+        <FullName>Старк Тоні Говардович</FullName>
+        <Faculty>ФКНК</Faculty>
+        <Department>ТТП</Department>
+        <ScientificDegree>Доктор наук</ScientificDegree>
+        <AcademicTitles>
+            <Title date="11-04-2012">Месник</Title>
+            <Title date="01-09-2021">Н</Title>
+        </AcademicTitles>
+    </Scientist>
+    
+    <Scientist>
+        <FullName>Я</FullName>
+        <Faculty>ФКНК</Faculty>
+        <Department>ТТП</Department>
+        <ScientificDegree>Асистент</ScientificDegree>
+        <AcademicTitles>
+            <Title date="01-09-2021">Найкраща практикиня К-26</Title>
+        </AcademicTitles>
+    </Scientist>
+</List>
