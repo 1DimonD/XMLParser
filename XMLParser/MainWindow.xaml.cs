@@ -1,4 +1,5 @@
-﻿using System.CodeDom.Compiler;
+﻿using System;
+using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.Net.Mime;
 using System.Security.Cryptography;
@@ -41,12 +42,18 @@ namespace XMLParser {
 		}
 
 		private void FindButton_OnClick(object sender, RoutedEventArgs e) {
-			IXMLFinder finder = GenerateFinder();
+			try {
+				IXMLFinder finder = GenerateFinder();
 
-			List<Scientist> scientists = finder.Find(GetCondition());
+				List<Scientist> scientists = finder.Find(GetCondition());
 
-			if (scientists.Count == 0) MessageBox.Show("Nothing were found");
-			foreach(var sc in scientists) Print(sc);
+				if (scientists.Count == 0) MessageBox.Show("Nothing were found");
+				CurrentDocument.Text = "";
+				foreach (var sc in scientists) Print(sc);
+			}
+			catch (Exception ex) {
+				MessageBox.Show(ex.Message);
+			}
 		}
 
 		private IXMLFinder GenerateFinder() {
@@ -73,6 +80,8 @@ namespace XMLParser {
 				var title = kvp.Value;
 				CurrentDocument.Text += title + ": " + date + "\n";
 			}
+
+			CurrentDocument.Text += "\n";
 		}
 		
 	}
