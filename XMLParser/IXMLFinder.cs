@@ -82,7 +82,58 @@ namespace XMLParser {
 	class DOMFinder : IXMLFinder {
 		
 		public List<Scientist> Find(Scientist condition) {
-			return new List<Scientist>();
+			XmlDocument xDoc = new XmlDocument();
+			xDoc.Load(File.filePath);
+
+			var list = xDoc.DocumentElement;
+			
+			string fullName = "";
+			string faculty = "";
+			string department = "";
+			string scientificDegree = "";
+			string date = "";
+			var academicTitles = new Dictionary<string, string>();
+
+			var scientists = new List<Scientist>();
+			
+			foreach (XmlNode scientist in list) {
+				
+				foreach (XmlNode xNode in scientist) {
+					switch (xNode.Name) {
+						case "FullName":         fullName = xNode.InnerText; break;
+						case "Faculty":          faculty = xNode.InnerText; break;
+						case "Department":       department = xNode.InnerText; break;
+						case "ScientificDegree": scientificDegree = xNode.InnerText; break;
+						case "AcademicTitles": {
+							foreach (XmlNode xNode1 in xNode) {
+								date = xNode1.Attributes["date"].Value;
+								if(!academicTitles.ContainsKey(date)) academicTitles.Add(date, xNode1.InnerText);
+							}
+							break;
+						}
+					}
+				}
+				
+				scientists.Add(
+					new Scientist(
+						fullName,
+						faculty,
+						department,
+						scientificDegree,
+						academicTitles
+					)
+				);
+				
+				academicTitles.Clear();
+				
+			}
+
+			Scientist[] copy = new Scientist[scientists.Count];
+			scientists.CopyTo(copy);
+			foreach (var sc in copy) {
+				if (sc != condition) scientists.Remove(sc);
+			}
+			return scientists;
 		}
 		
 	}
