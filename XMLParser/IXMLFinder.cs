@@ -55,15 +55,15 @@ namespace XMLParser {
 		}
 
 		public static bool operator ==(Scientist left, Scientist condition) {
-			if(left.fullName != condition.fullName && condition.fullName != "") return false;
-			if(left.faculty != condition.faculty && condition.faculty != "") return false;
-			if(left.department != condition.department && condition.department != "") return false;
-			if(left.scientificDegree != condition.scientificDegree && condition.scientificDegree != "") return false;
+			if(!left.fullName.Contains(condition.fullName) && condition.fullName != "") return false;
+			if(!left.faculty.Contains(condition.faculty) && condition.faculty != "") return false;
+			if(!left.department.Contains(condition.department) && condition.department != "") return false;
+			if(!left.scientificDegree.Contains(condition.scientificDegree) && condition.scientificDegree != "") return false;
 
 			if (condition.datesToAcademicTitles.Count == 0) return true;
 			foreach (var kvp in left.datesToAcademicTitles) {
 				foreach (var rkvp in condition.datesToAcademicTitles) {
-					if (kvp.Value == rkvp.Value) return true;
+					if (kvp.Value.Contains(rkvp.Value)) return true;
 				}
 			}
 
