@@ -8,7 +8,7 @@
         <table border="1">
             <tr>
                 <xsl:for-each select="List/Label">
-                    <td><xsl:value-of select="." /></td>
+                    <td><b><xsl:value-of select="." /></b></td>
                 </xsl:for-each>
             </tr>
             

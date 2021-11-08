@@ -12,22 +12,22 @@
     
     <Scientist>
         <FullName>Старк Тоні Говардович</FullName>
-        <Faculty>ФКНК</Faculty>
-        <Department>ТТП</Department>
+        <Faculty>ФФП (Факультет Фізичної Підготовки)</Faculty>
+        <Department>Захисту Вітчизни</Department>
         <ScientificDegree>Доктор наук</ScientificDegree>
         <AcademicTitles>
             <Title date="11-04-2012">Месник</Title>
-            <Title date="01-09-2021">Н</Title>
+            <Title date="25-04-2019">Мертвий Месник</Title>
         </AcademicTitles>
     </Scientist>
     
     <Scientist>
-        <FullName>Я</FullName>
-        <Faculty>ФКНК</Faculty>
-        <Department>ТТП</Department>
+        <FullName>Фізиченко Фізик Фізикович</FullName>
+        <Faculty>ФРЕКС</Faculty>
+        <Department>Фізики</Department>
         <ScientificDegree>Асистент</ScientificDegree>
         <AcademicTitles>
-            <Title date="01-09-2021">Найкраща практикиня К-26</Title>
+            <Title date="07-05-2021">Фізик</Title>
         </AcademicTitles>
     </Scientist>
 </List>
