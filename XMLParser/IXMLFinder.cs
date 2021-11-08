@@ -6,8 +6,12 @@ using System.Xml.Linq;
 
 namespace XMLParser {
 
-	public static class File {
-		public static string filePath = @"D:\Univ_C#\Work\XMLParser\XMLParser\TestFiles\Test1.xml";
+	public static class Test {
+		private static string coreCatalog = Environment.CurrentDirectory + @"..\..\..\TestFiles\";
+		public static string filePathXML = coreCatalog + "Test1.xml";
+		public static string filePathXSL = coreCatalog + "Table.xsl";
+		public static string filePathHTML = coreCatalog + "Table.html";
+		public static string filePathFoundXML = coreCatalog + "Table.xml";
 	}
 
 	public struct Scientist {
@@ -83,7 +87,7 @@ namespace XMLParser {
 		
 		public List<Scientist> Find(Scientist condition) {
 			XmlDocument xDoc = new XmlDocument();
-			xDoc.Load(File.filePath);
+			xDoc.Load(Test.filePathXML);
 
 			var list = xDoc.DocumentElement;
 			
@@ -144,7 +148,7 @@ namespace XMLParser {
 		public List<Scientist> Find(Scientist condition) {
 			List<Scientist> scientists = new List<Scientist>();
 			
-			using (XmlReader xr = XmlReader.Create(File.filePath)) {
+			using (XmlReader xr = XmlReader.Create(Test.filePathXML)) {
 				string fullName = "";
 				string faculty = "";
 				string department = "";
@@ -215,7 +219,7 @@ namespace XMLParser {
 	class LINQFinder : IXMLFinder {
 		
 		public List<Scientist> Find(Scientist condition) {
-			XDocument xdoc = XDocument.Load(File.filePath);
+			XDocument xdoc = XDocument.Load(Test.filePathXML);
 			if (xdoc == null) throw new Exception("Can`t open the file");
 
 			var matches = from scientist in xdoc.Element("List").Elements("Scientist")

@@ -15,7 +15,7 @@
                     <RadioButton GroupName="XMLFinder" Name="RadioSAX" FontSize="14">SAX</RadioButton>
                     <RadioButton GroupName="XMLFinder" FontSize="14" IsChecked="true">LINQ</RadioButton>
                 </StackPanel>
-                <Button Width="350" Content="Convert to HTML" FontSize="16"></Button>
+                <Button Width="350" Content="Convert to HTML" FontSize="16" Click="ConvertButton_OnClick"></Button>
             </StackPanel>
             
             <StackPanel DockPanel.Dock="Left" Name="Conditions" Width="330" Margin="10 0 10 0">
