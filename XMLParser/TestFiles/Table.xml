@@ -1,0 +1,29 @@
+<List>
+  <Label>ПІП</Label>
+  <Label>Факультет</Label>
+  <Label>Кафедра</Label>
+  <Label>Науковий ступінь</Label>
+  <Label>Вченні звання</Label>
+  <Scientist>
+    <FullName>Поліщук Наталія Володимирівна</FullName>
+    <Faculty>ФКНК</Faculty>
+    <Department>ТТП</Department>
+    <ScientificDegree>Асистент</ScientificDegree>
+    <AcademicTitles>Найкраща практикиня К-26: 01-09-2021</AcademicTitles>
+  </Scientist>
+  <Scientist>
+    <FullName>Старк Тоні Говардович</FullName>
+    <Faculty>ФФП (Факультет Фізичної Підготовки)</Faculty>
+    <Department>Захисту Вітчизни</Department>
+    <ScientificDegree>Доктор наук</ScientificDegree>
+    <AcademicTitles>Месник: 11-04-2012</AcademicTitles>
+    <AcademicTitles>Мертвий Месник: 25-04-2019</AcademicTitles>
+  </Scientist>
+  <Scientist>
+    <FullName>Фізиченко Фізик Фізикович</FullName>
+    <Faculty>ФРЕКС</Faculty>
+    <Department>Фізики</Department>
+    <ScientificDegree>Асистент</ScientificDegree>
+    <AcademicTitles>Фізик: 07-05-2021</AcademicTitles>
+  </Scientist>
+</List>
